@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+// setup static and middleware
 app.use(express.static('./navbar-app'))
-
 
 app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname,'./navbar-app/index.html'))
